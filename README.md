@@ -9,4 +9,4 @@ SCSS
 GULP
 CSS Grid
 
-DEMO: high-pass.netlify.app
+DEMO: https://high-pass.netlify.app/
