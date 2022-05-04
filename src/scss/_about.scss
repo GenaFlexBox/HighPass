@@ -1,0 +1,174 @@
+.about {
+  background-color: $mainColor;
+
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    color: $whiteColor;
+    margin-bottom: 5px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &-content__text {
+    color: $graylightColor;
+    line-height: 28px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: $fontSecondary;
+  }
+
+  &-form__pic {
+    margin-bottom: 24px;
+  }
+
+  &-form__sub {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 22px;
+    color: $whiteColor;
+    margin-bottom: 16px;
+  }
+
+  &-form__inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  &-form__input {
+    background-color: $grayColor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+    padding: 15px 23px;
+    color: white;
+    margin-right: 25px;
+  }
+
+  &-form__input:focus {
+    outline: 1px solid $orangeColor;
+  }
+
+  &-form__input:active {
+    outline: 0;
+  }
+
+  //placeholder styles
+
+  input::placeholder {
+    color: white;
+  }
+  input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: white;
+    transition: color 0.2s ease;
+  }
+
+  input:hover::-webkit-input-placeholder {
+    color: $hoverColor;
+  }
+
+  input:active::-webkit-input-placeholder {
+    color: white;
+  }
+
+  input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    transition: color 0.2s ease;
+  }
+
+  input:hover:-moz-placeholderr {
+    color: $hoverColor;
+  }
+
+  input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    transition: color 0.2s ease;
+  }
+
+  input:hover::-moz-placeholder {
+    color: $hoverColor;
+  }
+  input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: white;
+    transition: color 0.2s ease;
+  }
+
+  input:hover:-ms-input-placeholder {
+    color: $hoverColor;
+  }
+
+  &-form__btn {
+    font-size: 16px;
+    padding: 15px 22px;
+  }
+}
+
+@media screen and (max-width: $breakpoint1220) {
+  .about {
+    &-form__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &-form__input {
+      width: 342px;
+      padding: 15px 23px;
+      color: white;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint768) {
+  .about {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint480) {
+  .about {
+    &-content__text {
+      color: $graylightColor;
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    &-form__sub {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &-form__input {
+      width: 278px;
+      padding: 15px 23px;
+      color: white;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+}

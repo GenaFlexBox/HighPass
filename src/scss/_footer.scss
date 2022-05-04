@@ -1,0 +1,163 @@
+// Footer
+
+.footer {
+  display: block;
+  background-color: $mainColor;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 16px;
+  }
+
+  &__comment {
+    width: 361px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__mobile {
+    display: none;
+  }
+}
+
+.footer-logo {
+  &__img {
+    img {
+      width: 190px;
+      height: 31px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__img:focus {
+    outline: 3px solid $focusColor;
+  }
+
+  &__company {
+    width: 263px;
+    font-family: $fontSecondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #e9e9e9;
+  }
+}
+
+.footer-comment {
+  &__descr {
+    color: #cacaca;
+  }
+
+  &__name {
+    color: #666;
+  }
+}
+
+.footer-more {
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #cacaca;
+    margin-bottom: 8px;
+  }
+}
+
+.footer-social {
+  &__item:not(:last-child) {
+    margin-right: 21px;
+  }
+
+  &__link:focus {
+    outline: 0;
+    svg {
+      fill: $focusColor;
+    }
+  }
+
+  &__link:active {
+    svg {
+      fill: $activeColor;
+    }
+  }
+}
+
+@media (max-width: $breakpoint1220) {
+  .footer-logo {
+    &__img {
+      img {
+        width: 166px;
+        height: 27px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint992) {
+  .footer__comment {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint480) {
+  .footer {
+    &__container {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-top: 31px;
+      padding-bottom: 13px;
+      justify-content: start;
+    }
+  }
+
+  .footer {
+    &__logo {
+      display: none;
+    }
+
+    &__mobile {
+      background-color: $grayColor;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+  }
+  .footer-mobile {
+    // .footer-mobile__logo
+
+    &__logo {
+      margin-bottom: 4px;
+    }
+
+    // .footer-mobile__company
+
+    &__company {
+      font-family: $fontSecondary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 13px;
+      color: #e9e9e9;
+    }
+  }
+}

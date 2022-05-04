@@ -1,0 +1,209 @@
+// Container
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+// Body Locked
+body {
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+//Заголовки
+.heading {
+  font-family: "TTFirsNeue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+//Кнопки и их свойства
+.btn {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: $whiteColor;
+
+  background-color: $orangeColor;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.btn:focus {
+  outline: 3px solid $focusColor;
+}
+
+.btn:hover {
+  background-color: $hoverColorBtn;
+}
+
+.btn:active {
+  background-color: $activeColor;
+}
+
+.btn--light {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: $whiteColor;
+  padding: 13px 20px;
+  transition: background-color 0.2s ease-in-out;
+  border: 3px solid $orangeColor;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.btn--light:focus {
+  outline: 3px solid $orangeColor;
+  background-color: $focusColor;
+}
+
+.btn--light:hover {
+  background-color: $hoverColor;
+}
+
+.btn--light:active {
+  background-color: $activeColor;
+}
+
+//link styles
+a {
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: $hoverColor;
+}
+
+//Pager
+.pager {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 15px;
+  background-color: $pagerColor;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: $whiteColor;
+}
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    width: 410px;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes slideInRightMob {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+
+  100% {
+    width: 410px;
+    height: 100%;
+  }
+}
+
+@keyframes slideInLeftMob {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+
+  100% {
+    width: 100%;
+    height: 157px;
+  }
+}
+
+@keyframes slideInText {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

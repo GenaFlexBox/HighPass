@@ -1,0 +1,33 @@
+// Container & Breakpoints
+@use "sass:math";
+$containerWidth: 1290;
+$containerPadding: 60;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1220: 1219.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+$breakpoint320: 320 + px;
+
+// Burger Menu
+$burgerBreakpoint: $breakpoint768;
+$burgerColor: "white";
+$burgerActiveColor: "white";
+
+// Fonts
+$fontMain: "Roboto", sans-serif;
+$fontSecondary: "TTFirsNeue", sans-serif;
+
+//Colors
+$orangeColor: #ff6e30;
+$mainColor: #202020;
+$whiteColor: #fff;
+$grayColor: #4a4a4a;
+$graylightColor: #cacaca;
+$pagerColor: #333333;
+
+//color Force state
+$hoverColor: #ff6e30;
+$focusColor: #bc572b;
+$activeColor: #ce4307;
+$hoverColorBtn: #bc572b;
